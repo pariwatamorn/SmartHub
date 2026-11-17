@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compliance Risk & ACP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Compliance Risk Assessment &amp; Annual Compliance Program</h1>
+      <p class="sub">KTB Smart Legal &amp; Compliance Hub · ระบบสนับสนุนการตัดสินใจ (decision-support) — ผลลัพธ์ต้องสอบทานและอนุมัติโดยผู้มีอำนาจ</p>
+    </div>
+    <div class="who">
+      <label>ผู้ใช้งาน (ตำแหน่ง/หน่วยงาน — ไม่ต้องใส่ชื่อจริงหากไม่จำเป็น)
+        <input id="currentUser" placeholder="เช่น DBR Analyst">
+      </label>
+      <label>ปีแผน ACP <input id="planYear" type="number" min="2020" max="2100"></label>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="guide" class="active">1. คู่มือ &amp; หลักการ</button>
+    <button data-tab="universe">2. Compliance Universe</button>
+    <button data-tab="register">3. ประเมินความเสี่ยง</button>
+    <button data-tab="heatmap">4. Heat Map</button>
+    <button data-tab="acp">5. Annual Compliance Program</button>
+    <button data-tab="bluebook">6. ตรวจตามเกณฑ์ Blue Book</button>
+    <button data-tab="audit">7. Audit Trail &amp; ข้อมูล</button>
+  </nav>
+
+  <main>
+    <section id="tab-guide" class="tab active"></section>
+    <section id="tab-universe" class="tab"></section>
+    <section id="tab-register" class="tab"></section>
+    <section id="tab-heatmap" class="tab"></section>
+    <section id="tab-acp" class="tab"></section>
+    <section id="tab-bluebook" class="tab"></section>
+    <section id="tab-audit" class="tab"></section>
+  </main>
+
+  <footer class="disclaimer">
+    ข้อมูลนี้เป็นการสนับสนุนการพิจารณาเบื้องต้น มิใช่ความเห็นทางกฎหมายที่สิ้นสุด โปรดสอบทานโดยผู้รับผิดชอบและตรวจสอบกับฉบับกฎเกณฑ์ล่าสุด (รวมถึง Blue Book ฉบับที่มีผลบังคับใช้) ก่อนนำไปใช้
+    · ห้ามบันทึกข้อมูลส่วนบุคคลของลูกค้าในระบบนี้ (PDPA — data minimization)
+  </footer>
+
+  <dialog id="riskDialog"><form method="dialog" id="riskForm"></form></dialog>
+
+  <script src="config.js"></script>
+  <script src="engine.js"></script>
+  <script src="sample-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
